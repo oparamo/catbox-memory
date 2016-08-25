@@ -19,4 +19,4 @@ Current version: [![Current Version](https://img.shields.io/npm/v/catbox-memory.
   stringified, and are copied before storage to prevent the value from changing while
   in the cache. Defaults to `false`.
 
-Note: the maximum allowed value for `ttl` is `2^31-1`, which is around 24.8 days.
+Note: the maximum allowed value for `ttl` is `2^53 - 1`, which is around 285,616 years.

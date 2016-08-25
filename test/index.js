@@ -210,9 +210,9 @@ describe('Memory', () => {
 
             const key = { id: 'x', segment: 'test' };
 
-            client.set(key, '123', Math.pow(2, 31), (err) => {
+            client.set(key, '123', Math.pow(2, 53), (err) => {
 
-                expect(err.message).to.equal('Invalid ttl (greater than 2147483647)');
+                expect(err.message).to.equal(`Invalid ttl (greater than ${Number.MAX_SAFE_INTEGER})`);
                 done();
             });
         });
